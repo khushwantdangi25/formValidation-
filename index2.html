@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <div class="cart">
+   
+    <button onclick= "create()">Add</button>
+   </div>
+    <script>
+        function create(){
+            let n = document.createElement("div");
+            n.style.backgroundColor = "black";
+            n.style.width = "300px";
+
+
+            console.dir(n);
+            console.log(typeof n)
+        let h = document.createElement("h1");
+        h.textContent = "happy happy happy";
+        h.style.color = "pink"
+        n.appendChild(h);
+        document.querySelector("body").appendChild(n);
+
+        }
+       
+    </script>
+</body>
+</html>
