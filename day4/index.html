@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<!-- <body>
+    <div class="container">
+       
+    <h1 id = " h"> welcome </h1>
+
+    
+       
+    </div>
+     <button id = "clear">Clear All</button>
+    
+    <script>
+        const h = document.querySelector("h1");
+        const btn = document.querySelector("button");
+        btn.addEventListener("click" , () =>{
+            console.dir(h.parentElement)
+        })
+    </script>
+</body> -->
+<body>
+   
+    <!-- child navigation -->
+    <!-- <div class="b1">
+        <h1>1</h1>
+        <h2>2</h2>
+        <button>kuch bhi</button>
+    </div>
+      -->
+
+<!-- sibling navigation -->
+<!-- property :- nextElementSibling = returns nextSibling -->
+   <!-- current element k left ya right me kese jaoge  -->
+    <div id = "h">
+        <h1>heeeee</h1>
+        <p id = "para"></p>
+        <button >kuch bhi</button>
+    </div>
+    
+    <script>
+        const btn = document.querySelector("p");
+        console.log(btn.nextElementSibling) // return next sibling = button
+        console.log(btn.previousElementSibling) // return previous elemnt = h1
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom traversal</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background:skyblue;
+            padding: 30px;
+        }
+        h1{
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .control{
+            padding: 10px 15px;
+            margin: 5px;
+            cursor: pointer;
+        }
+        .card{
+            background:wheat;
+            border: 2px solid gray;
+            padding: 20px;
+            margin-bottom: 15px;
+        }
+        .action{
+            margin-top: 15px;
+
+        }
+        .action button{
+            margin-right: 10px;
+            padding: 8px 12px;
+
+        }
+        .favt{
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Student Directory</h1>
+
+    <div class="control">
+        <button id=" f1">First Student</button>
+        <button id=" l1">Last Student</button>
+        <button id=" h1">HighlightBtn</button>
+        <button id=" reset">Reset</button>
+        <button id="total">Total</button>
+    </div>
+
+   <div class="box">
+     <div class="card">
+        <h2>Khush</h2>
+        <p> Java dev</p>
+        <div class="action">
+            <button class = "prev">Prev</button>
+            <button class ="next">Next</button>
+            <button class = "fav">Fav</button>
+            <button class="del">Delete</button>
+        </div>
+    </div>
+    <div class="card">
+        <h2>Rahul</h2>
+        <p>MERN stack dev</p>
+        <div class="action">
+            <button class = "prev">Prev</button>
+            <button class ="next">Next</button>
+            <button class = "fav">Fav</button>
+            <button class="del">Delete</button>
+        </div>
+    </div>
+    <div class="card">
+        <h2>Jay</h2>
+        <p>vella dev</p>
+        <div class="action">
+            <button class = "prev">Prev</button>
+            <button class ="next">Next</button>
+            <button class = "fav">Fav</button>
+            <button class="del">Delete</button>
+        </div>
+    </div>
+   </div>
+  
+   <h2 id = "res"> total student :- </h2>
+
+    <script src="script.js"></script>
+</body>
+</body>
+
+</html>

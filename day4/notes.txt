@@ -1,0 +1,25 @@
+Dom traversal in js ans navigation
+what is parent navigation
+what is dom traversal 
+
+javaScript can travers in four direction 
+current -> next
+current -> previous
+current -> child
+current - > parent
+
+parent :- are the element which contain the inside child element 
+
+<section parent of div>
+ <div parentof h1>
+  <h1> </h1>
+ </div>
+</section>
+
+
+(parentElement) : returns the immediate parent html element
+
+element.parentElement
+
+closest() is especially useful when you don't know exactly how many levels up 
+the element you need to go—you just know the selector you're looking for.
