@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Traversal</title>
+</head>
+<body>
+    <!-- <div class="card">
+        <h1>samsung</h1>
+        <p class="kk">599</p>
+        <p class="rate">5</p>
+        <button class="show">show</button>
+    </div>
+    <div class="card">
+        <h1>iphone</h1>
+        <p class="kk">599</p>
+        <p class="rate">5</p>
+        <button class="show">show</button>
+    </div> -->
+      
+     <!-- <div class="card">
+        <div class="image">
+            <div class="details">
+            <h3>kkkkkkkk</h3>
+             <button class = "show">show</button>
+            </div>
+        </div>
+    </div>
+         -->
+
+     <!-- <table border="1">
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Action</th>
+    </tr>
+
+    <tr>
+      <td>Shreyansh</td>
+      <td>100</td>
+      <td>
+        <button class="delete">Delete</button>
+      </td>
+    </tr>
+
+    <tr>
+      <td>John</td>
+      <td>20</td>
+      <td>
+        <button class="delete">Delete</button>
+      </td>
+    </tr>
+
+    <td>Bob</td>
+      <td>22</td>
+      <td>
+        <button class="delete">Delete</button>
+      </td>
+    </tr>
+  </table> -->
+  <ul>
+  <li>coffee 
+    <button class="delete">delete</button>
+  </li>
+  <li>chai 
+    <button class="delete">delete</button>
+  </li>
+  <li>macha
+    <button class="delete">delete</button>
+  </li>
+ 
+ 
+  </ul>
+     
+    <script>
+        // let but= document.querySelectorAll(".show");
+        // for(let button of but){
+        //     button.addEventListener("click" , function(){
+        //        const card =  this.closest(".card");
+        //        const title = card.querySelector("h1");
+        //        const price = card.querySelector(".kk");
+        //        const rate = card.querySelector(".rate");
+        //        alert(
+        //         title.innerText+"\n"+
+        //         price.innerText+"\n"+
+        //         rate.innerText
+        //        )
+        //     })
+        // }
+    //   const button = document.querySelector(".show");
+
+// button.addEventListener("click", function () {
+//     const card = this.closest(".card");
+//     const title = card.querySelector("h3");
+//     alert(title.innerText);
+// });
+    //    const button = document.querySelectorAll(".delete");
+    //    for(let but of button){
+    //             but.addEventListener("click", function () {
+    //             let row = this.closest("tr");
+    //             let ne = row.children[0].innerText;
+               
+    //               alert(ne);
+    //               row.remove();
+    //       });
+    //    }
+   
+    const button = document.querySelectorAll(".delete");
+    for(let but of button){
+        but.addEventListener("click" , function(){
+               const ch =   this.closest("li");
+               let n = ch.firstChild.textContent;
+               ch.remove();
+               alert(n);
+        })
+       
+    }
+    </script>
+</body>
+</html>
+
+<!-- parent element  , closest , children , childnodes , siblings , nextsibling, previousibling , current , firstElementchlid , lastElement chlid -->

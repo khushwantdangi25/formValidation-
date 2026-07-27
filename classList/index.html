@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        flex-direction: column;
+      }
+      button{
+        border-radius: 20px;
+        width: 100px;
+        outline: none;
+        background-color: rgb(29, 29, 29);
+        border: none;
+        height: 30px;
+        font-size: 15px;
+
+        color: white;
+        
+      }
+      .card {
+        width: 200px;
+        height: 300px;
+        background: #000;
+        margin: 20px;
+      }
+      .red {
+        background: #ff0000;
+      }
+      .remove {
+        background: #cecece;
+      }
+      .toggle {
+        width: 300px;
+        border-radius: 50%;
+      }
+      .replace {
+        background: #0661b7;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card"></div>
+
+    <div class="controls">
+      <button id="add">add red</button>
+      <button id="remove">remove</button>
+      <button id="toggle">toggle</button>
+      <button id="replace">Replace</button>
+      <button id="contains">contain</button>
+    </div>
+
+    <script>
+      const box = document.querySelector(".card");
+      const button = document.querySelectorAll("button");
+      button.forEach(function (u) {
+        u.addEventListener("click", function () {
+          switch (this.id) {
+            case "add":
+              box.classList.add("red");
+              break;
+            case "remove":
+              box.classList.remove("red");
+              break;
+            case "replace":
+              box.classList.replace("red", "replace");
+              break;
+            case "toggle":
+              box.classList.toggle("toggle");
+              break;
+            case "contains":
+              if (box.classList.contains("red")) {
+                alert("yes");
+              } else {
+                alert("no");
+              }
+              break;
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
