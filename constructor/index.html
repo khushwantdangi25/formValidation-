@@ -4,20 +4,105 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    .main{
+      background-color: cadetblue;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      gap:10px;
+      
+
+    }
+    #accountForm{
+      
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 20px;
+      width: 230px;
+      height: 230px;
+      border: 1px solid black;
+       border-radius: 20px;
+    }
+    #depositForm{
+    
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 20px;
+      width: 230px;
+      height: 230px;
+      border: 1px solid black;
+       border-radius: 20px;
+    }
+    #withdraw{
+      
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 20px;
+      width: 230px;
+      height: 230px;
+      border: 1px solid black;
+      border-radius: 20px;
+    }
+    input{
+      border-radius: 20px;
+      padding: 8px;
+      outline: none;
+      border: none;
+    }
+    button{
+      border-radius: 20px;
+      padding: 8px;
+      outline: none;
+      border: none;
+      background-color: burlywood;
+    }
+    h1{
+      text-align: center;
+      color: bisque;
+    }
+    body{
+      background-color: rgb(4, 4, 4);
+    }
+
+  </style>
 </head>
 <body>
-  <h2>Apna Bank</h2>
-  <form id="accountForm">
+  <h1>Apna Sapna Money  Bank</h1>
+  <div class="main">
+     <form id="accountForm">
+    <h2>Create Account</h2>
     <input type="text" placeholder="Customer Name" id="customerName">
     <input type="text" placeholder="Initial Balance" id="balance">
     <button>Create account</button>
   </form>
 
-  <!-- <form id="depositForm">
+  <form id="depositForm">
+    <h2>Deposit Amount</h2>
     <input type="text" placeholder="accountNumber" id="accNum">
     <input type="text" placeholder="Amount" id="amnt">
     <button>Deposit</button>
-  </form> -->
+  </form>
+  <form id="withdraw">
+    <h2>Withdraw Amount</h2>
+    <input type="text" placeholder="accountNumber" id="accountNumber">
+    <input type="text" placeholder="Amount" id="amount">
+    <button>withdraw</button>
+  </form>
+  </div>
+ 
   <script src="script.js"></script>
 </body>
 </html>
