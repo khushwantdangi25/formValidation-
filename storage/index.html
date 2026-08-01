@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Storage Demo</title>
+</head>
+<body>
+
+<h2>Local & Session Storage Demo</h2>
+
+<input type="text" id="nameInput" placeholder="Enter your name">
+
+<br><br>
+
+<button id="saveLocalBtn">Save Local</button>
+<button id="showLocalBtn">Show Local</button>
+
+<br><br>
+
+<button id="saveSessionBtn">Save Session</button>
+<button id="showSessionBtn">Show Session</button>
+
+<br><br>
+
+<button id="clearBtn">Clear All</button>
+
+<h3 id="outputText"></h3>
+
+<script>
+    let name = document.getElementById("nameInput");
+    let output = document.getElementById("outputText");
+
+    let sl = document.getElementById("saveLocalBtn");
+    let shl = document.getElementById("showLocalBtn");
+    let ss = document.getElementById("saveSessionBtn");
+    let shs = document.getElementById("showSessionBtn");
+    let c = document.getElementById("clearBtn");
+
+    sl.addEventListener("click", function () {
+        localStorage.setItem("username", name.value);
+        alert("Saved in Local Storage");
+    });
+
+    shl.addEventListener("click", function () {
+        output.innerHTML = "Local Storage: " + localStorage.getItem("username");
+    });
+
+    ss.addEventListener("click", function () {
+        sessionStorage.setItem("username", name.value);
+        alert("Saved in Session Storage");
+    });
+
+    shs.addEventListener("click", function () {
+        output.innerHTML = "Session Storage: " + sessionStorage.getItem("username");
+    });
+
+    c.addEventListener("click", function () {
+        localStorage.clear();
+        sessionStorage.clear();
+        output.innerHTML = "";
+        alert("Storage Cleared");
+    });
+</script>
+
+</body>
+</html>
